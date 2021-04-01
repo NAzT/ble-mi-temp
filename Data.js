@@ -13,6 +13,10 @@ const validator = {
 
 const store = new Proxy(orig, validator);
 
+setInterval(() => {
+  console.log(Object.keys(store))
+}, 1000)
+
 module.exports = {
   set: (key, val) => {
     if (store[key] === undefined) {

@@ -8,6 +8,12 @@ let xq = [
   'MQTT_PREFIX',
 ]
 
+process.env.MQTT_HOST = 'localhost'
+process.env.MQTT_PORT = 1883
+process.env.MQTT_USERNAME = "test"
+process.env.MQTT_PASSWORD = "test"
+process.env.MQTT_PREFIX = "BLE/xiaomi/"
+
 let xx = xq.map((k) => Object.keys(process.env).includes(k))
 
 for (const item of xq) {
